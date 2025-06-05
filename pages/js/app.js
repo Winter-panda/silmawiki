@@ -11,7 +11,13 @@ function resolvePath(section) {
         'stormshield': `${BASE_PATH}pages/Reseaux/stormshield.html`,
         'supervision': `${BASE_PATH}pages/Reseaux/supervision.html`,
         'scripting': `${BASE_PATH}pages/scripting/scripting.html`,
-        'powershell': `${BASE_PATH}pages/scripting/powershell.html`
+        'powershell': `${BASE_PATH}pages/scripting/powershell.html`,
+        'bases-powershell': `${BASE_PATH}pages/Base%20de%20connaissance/bases-powershell.md`,
+        'bases-active-directory': `${BASE_PATH}pages/Base%20de%20connaissance/bases-active-directory.md`,
+        'bases-reseau': `${BASE_PATH}pages/Base%20de%20connaissance/bases-reseau.md`,
+        'bases-vmware': `${BASE_PATH}pages/Base%20de%20connaissance/bases-vmware.md`,
+        'bases-securite': `${BASE_PATH}pages/Base%20de%20connaissance/bases-securite.md`,
+
     };
 
     const homelabFiles = ['centreon_grafana', 'guacamole', 'homelab', 'proxmox', 'sauvegardes', 'serveur_mail', 'truenas', 'vpn_wireguard'];

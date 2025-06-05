@@ -1,35 +1,40 @@
-<h2><i class="fas fa-book"></i> Base de Connaissances</h2>
+<h2><i class="fas fa-book"></i> Base de connaissances</h2>
 
 <div class="knowledge-container">
 
-    <div class="knowledge-card" onclick="loadContent('lab_infra')">
-        <div class="knowledge-icon"><i class="fas fa-sitemap"></i></div>
-        <h3>Mise en place d'une infrastructure</h3>
-        <p>Mise en place d'une infrastructure de tests (AD, DNS, DHCP, Hyper-V, VMware, etc.)</p>
-    </div>
-   
-    <div class="knowledge-card" onclick="loadContent('exchange')">
-        <div class="knowledge-icon"><i class="fas fa-envelope"></i></div>
-        <h3>Exchange</h3>
-        <p>Installation, configuration et administration d'Exchange 2019.</p>
+    <!-- Tuile PowerShell -->
+    <div class="knowledge-card" onclick="loadContent('bases-powershell')">
+        <i class="fas fa-terminal"></i>
+        <h3>PowerShell</h3>
+        <p>Scripts & administration système avec PowerShell</p>
     </div>
 
-    <div class="knowledge-card" onclick="loadContent('powershell')">
-        <div class="knowledge-icon"><i class="fas fa-terminal"></i></div>
-        <h3>Base du Scripting PowerShell</h3>
-        <p>Bien débuter avec PowerShell (création d'utilisateurs, GPO, gestion des groupes...)</p>
+    <!-- Tuile Active Directory -->
+    <div class="knowledge-card" onclick="loadContent('bases-active-directory')">
+        <i class="fas fa-users-cog"></i>
+        <h3>Active Directory</h3>
+        <p>Gestion des utilisateurs, groupes et GPO</p>
     </div>
 
-    <div class="knowledge-card" onclick="loadContent('stormshield')">
-        <div class="knowledge-icon"><i class="fas fa-fire-alt"></i></div>
-        <h3>Stormshield SNSCSA</h3>
-        <p>Paramétrage, sécurité réseau, certificats et configuration avancée sur Stormshield.</p>
+    <!-- Tuile Réseau -->
+    <div class="knowledge-card" onclick="loadContent('bases-reseau')">
+        <i class="fas fa-network-wired"></i>
+        <h3>Réseau</h3>
+        <p>Principes de base de l'administration réseau</p>
     </div>
 
-    <div class="knowledge-card" onclick="loadContent('supervision')">
-        <div class="knowledge-icon"><i class="fas fa-chart-line"></i></div>
-        <h3>Supervision / GLPI</h3>
-        <p>Installation GLPI, portail distant, inventaire automatique, gestion des tickets et supervision.</p>
+    <!-- Tuile VMware -->
+    <div class="knowledge-card" onclick="loadContent('bases-vmware')">
+        <i class="fas fa-server"></i>
+        <h3>Virtualisation VMware</h3>
+        <p>Gestion des hyperviseurs et VM VMware</p>
+    </div>
+
+    <!-- Tuile Sécurité -->
+    <div class="knowledge-card" onclick="loadContent('bases-securite')">
+        <i class="fas fa-shield-alt"></i>
+        <h3>Sécurité</h3>
+        <p>Antivirus, pare-feu, MFA et sécurisation globale</p>
     </div>
 
 </div>
