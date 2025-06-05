@@ -75,13 +75,17 @@
                 <!-- Base de connaissances -->
                 <li>
                     <a href="#" onclick="loadContent('base')">
-                        Base de Co
+                    Base de Co
                         <span style="cursor: pointer; margin-left: 8px;" onclick="toggleSubmenu('baseSubmenu'); event.stopPropagation();">
-                            <i class="fas fa-chevron-right" id="chevron-base" style="transition: transform 0.3s;"></i>
-                        </span>
+                <i class="fas fa-chevron-right" id="chevron-base" style="transition: transform 0.3s;"></i>
+                         </span>
                     </a>
                     <ul id="baseSubmenu" class="submenu" style="display: none;">
-                        <li><a href="#" onclick="loadContent('exchange')">Exchange</a></li>
+                        <li><a href="#" onclick="loadContent('bases-powershell')">PowerShell</a></li>
+                        <li><a href="#" onclick="loadContent('bases-active-directory')">Active Directory</a></li>
+                        <li><a href="#" onclick="loadContent('bases-reseau')">Réseau</a></li>
+                        <li><a href="#" onclick="loadContent('bases-vmware')">VMware</a></li>
+                        <li><a href="#" onclick="loadContent('bases-securite')">Sécurité</a></li>
                     </ul>
                 </li>
             </ul>
