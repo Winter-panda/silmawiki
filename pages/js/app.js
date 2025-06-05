@@ -2,25 +2,25 @@ const BASE_PATH = window.location.hostname === 'winter-panda.github.io' ? '/silm
 
 function resolvePath(section) {
     const mappings = {
-        'home': 'pages/home.html',
-        'apropos': 'pages/apropos.html',
-        'corps': 'pages/corps.html',
-        'base': 'pages/Base-de-connaissance/base.html',
-        'exchange': 'pages/base-de-connaissance/exchange.html',
-        'projets': 'pages/Projets/projets.html',
-        'stormshield': 'pages/reseaux/stormshield.html',
-        'supervision': 'pages/reseaux/supervision.html',
-        'scripting': 'pages/scripting/scripting.html',
-        'powershell': 'pages/scripting/powershell.html'
+        'home': `${BASE_PATH}pages/home.html`,
+        'apropos': `${BASE_PATH}pages/apropos.html`,
+        'corps': `${BASE_PATH}pages/corps.html`,
+        'base': `${BASE_PATH}pages/Base%20de%20connaissance/base.html`,
+        'exchange': `${BASE_PATH}pages/Base%20de%20connaissance/exchange.html`,
+        'projets': `${BASE_PATH}pages/Projets/projets.html`,
+        'stormshield': `${BASE_PATH}pages/Reseaux/stormshield.html`,
+        'supervision': `${BASE_PATH}pages/Reseaux/supervision.html`,
+        'scripting': `${BASE_PATH}pages/scripting/scripting.html`,
+        'powershell': `${BASE_PATH}pages/scripting/powershell.html`
     };
 
     const homelabFiles = ['centreon_grafana', 'guacamole', 'homelab', 'proxmox', 'sauvegardes', 'serveur_mail', 'truenas', 'vpn_wireguard'];
     const scriptingFiles = ['audit_acces', 'copie_utilisateurs', 'creation_comptes', 'exports', 'gestion_droits', 'gestion_groupes', 'liste_groupes'];
 
     if (homelabFiles.includes(section)) {
-        return `pages/projets/homelab/${section}.md`;
+        return `${BASE_PATH}pages/Projets/homelab/${section}.md`;
     } else if (scriptingFiles.includes(section)) {
-        return `pages/scripting/${section}.md`;
+        return `${BASE_PATH}pages/scripting/${section}.md`;
     } else {
         return mappings[section] || '';
     }
@@ -52,7 +52,7 @@ function loadContent(section) {
                 document.getElementById("content").innerHTML = "<h2>Erreur</h2><p>Impossible de charger le fichier HTML.</p>";
             });
     } else {
-        document.getElementById("content").innerHTML = "<h2>Erreur</h2><p>Contenu non trouvé.</p>";
+        document.getElementById("content").innerHTML = "<h2>Erreur</h2><p>Contenu non trouvé.</p>"
     }
 }
 
@@ -92,7 +92,7 @@ function openSubmenu(id) {
     if (chevron) chevron.style.transform = 'rotate(90deg)';
 }
 
-// Gestion du toggle des blocs compétences dans la page "à propos"
+// Gestion des compétences "A propos"
 function toggleProjects(id) {
     const el = document.getElementById(id);
     el.classList.toggle('open');
