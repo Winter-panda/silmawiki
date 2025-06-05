@@ -1,8 +1,8 @@
 /* content.css */
 .content {
     margin-top: 90px;
-    margin-left: 40px;
-    margin-right: 240px;
+    margin-left: auto;
+    margin-right: auto;
     padding: 40px;
     background: white;
     border-radius: 12px;
