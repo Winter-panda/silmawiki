@@ -113,3 +113,19 @@
 .content .highlight p {
     margin: 0;
 }
+.certifications {
+    list-style: none;
+    padding: 0;
+}
+
+.certifications li {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.cert-logo {
+    width: 40px;
+    height: auto;
+    margin-right: 15px;
+}
