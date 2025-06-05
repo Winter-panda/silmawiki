@@ -27,7 +27,7 @@
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
 }
 
-/* Encarts compétences masqués par défaut */
+
 .project-list {
     display: none;
     overflow: hidden;
@@ -40,12 +40,12 @@
     transition: max-height 0.4s ease, padding 0.4s ease;
 }
 
-/* Quand le bloc est ouvert */
+
 .project-list.open {
     display: block;
 }
 
-/* Suppression des puces et style des items */
+
 .project-list ul {
     list-style: none;
     padding: 0;
@@ -111,4 +111,21 @@
 
 .project-item:hover {
     color: #000;
+}
+
+.intro-text {
+    background-color: #f7f7f7;
+    border: 1px solid #ddd;
+    border-radius: 12px;
+    padding: 20px 30px;
+    max-width: 900px;
+    margin: 20px auto;
+    text-align: justify;
+    font-size: 1rem;
+    color: #333;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+}
+.intro-text h2 {
+    color: #1e293b;
+    margin-bottom: 15px;
 }
