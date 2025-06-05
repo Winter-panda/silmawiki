@@ -1,0 +1,58 @@
+<h2><i class="fas fa-terminal"></i> Scripting</h2> 
+
+<p style="text-align: justify;">
+Cette section centralise mes différents scripts d'administration permettant l'automatisation de tâches courantes : gestion des droits, création de comptes, exportations de données, audits d'accès et reporting Active Directory.
+</p>
+
+<div class="scripting-container"> 
+
+    <!-- Gestion des droits -->
+    <div class="scripting-card" onclick="loadContent('gestion_droits')"> 
+        <div class="scripting-icon"><i class="fas fa-user-shield"></i></div> 
+        <h3>Gestion des droits</h3> 
+        <p>Scripts de gestion et affectation des droits d'accès Active Directory et NTFS.</p> 
+    </div> 
+
+    <!-- Exports -->
+    <div class="scripting-card" onclick="loadContent('exports')"> 
+        <div class="scripting-icon"><i class="fas fa-file-export"></i></div> 
+        <h3>Exports</h3> 
+        <p>Scripts d'exportation de groupes, d'utilisateurs, de reporting et de documentation AGDLP.</p> 
+    </div>
+
+    <!-- Création de comptes -->
+    <div class="scripting-card" onclick="loadContent('creation_comptes')"> 
+        <div class="scripting-icon"><i class="fas fa-user-plus"></i></div> 
+        <h3>Création de comptes</h3> 
+        <p>Automatisation complète de la création d'utilisateurs, groupes et boîtes aux lettres.</p> 
+    </div>
+
+    <!-- Gestion des groupes (exports membres) -->
+    <div class="scripting-card" onclick="loadContent('gestion_groupes')"> 
+        <div class="scripting-icon"><i class="fas fa-users-cog"></i></div> 
+        <h3>Gestion des groupes</h3> 
+        <p>Scripts d'extraction des membres de groupes et d'audit de la structure de groupes AD.</p> 
+    </div>
+
+    <!-- Liste des groupes existants -->
+    <div class="scripting-card" onclick="loadContent('liste_groupes')"> 
+        <div class="scripting-icon"><i class="fas fa-list"></i></div> 
+        <h3>Liste des groupes</h3> 
+        <p>Scripts permettant d'extraire la liste des groupes existants dans le domaine.</p> 
+    </div>
+
+    <!-- Audit des accès effectifs -->
+    <div class="scripting-card" onclick="loadContent('audit_acces')"> 
+        <div class="scripting-icon"><i class="fas fa-search"></i></div> 
+        <h3>Audit des accès</h3> 
+        <p>Scripts de contrôle des accès effectifs aux ressources partagées et aux dossiers NTFS.</p> 
+    </div>
+
+    <!-- Copie des utilisateurs d'un groupe -->
+    <div class="scripting-card" onclick="loadContent('copie_utilisateurs')"> 
+        <div class="scripting-icon"><i class="fas fa-clone"></i></div> 
+        <h3>Copie de membres</h3> 
+        <p>Scripts de duplication d'appartenance entre groupes AD pour synchronisation de droits.</p> 
+    </div>
+
+</div>

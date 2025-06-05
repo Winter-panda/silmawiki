@@ -1,0 +1,72 @@
+/* layout.css */
+.container {
+    display: flex;
+    height: 100vh;
+}
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 220px;
+    height: 70px;
+    background: linear-gradient(to right, #666666, #999999);
+    color: white;
+    display: flex;
+    align-items: center;
+    padding-left: 30px;
+    font-size: 1.8rem;
+    font-weight: 600;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+    z-index: 1000;
+}
+
+.sidebar {
+    position: fixed;
+    right: 0;
+    top: 0;
+    width: 220px;
+    height: 100%;
+    background: #2e3440;
+    color: #ffffff;
+    padding-top: 90px;
+    box-shadow: -2px 0 6px rgba(0,0,0,0.2);
+}
+
+.sidebar ul {
+    list-style: none;
+    padding: 0;
+}
+
+.sidebar li {
+    margin: 15px 0;
+}
+
+.sidebar a {
+    color: #d8dee9;
+    text-decoration: none;
+    padding: 12px 20px;
+    display: block;
+    transition: all 0.3s;
+    font-weight: 500;
+}
+
+.sidebar a:hover {
+    background: #4c566a;
+    border-left: 4px solid #b48ead;
+    color: white;
+}
+.submenu li {
+    margin: 8px 0;
+    font-size: 0.9rem;
+    padding-left: 20px; /* Décalage vers la droite */
+}
+
+.submenu a {
+    font-size: 0.9rem;
+    color: #d8dee9;
+}
+
+.submenu a:hover {
+    color: white;
+}

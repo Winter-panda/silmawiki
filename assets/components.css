@@ -1,0 +1,114 @@
+/* Containers des tuiles */
+.card-container, .project-container, .knowledge-container, .scripting-container, .subpage-container, .skills-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    margin-top: 30px;
+}
+
+/* Style des cartes */
+.card, .project-card, .knowledge-card, .scripting-card, .skill-card, .subpage-card {
+    background: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 12px;
+    padding: 30px;
+    width: 260px;
+    text-align: center;
+    transition: transform 0.3s, box-shadow 0.3s;
+    cursor: pointer;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+    color: #1e293b;
+    text-decoration: none;
+}
+
+.card:hover, .project-card:hover, .knowledge-card:hover, .scripting-card:hover, .skill-card:hover, .subpage-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+/* Encarts compétences masqués par défaut */
+.project-list {
+    display: none;
+    overflow: hidden;
+    background: #f5f5f5;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin-top: 10px;
+    padding: 15px;
+    transition: max-height 0.4s ease, padding 0.4s ease;
+}
+
+/* Quand le bloc est ouvert */
+.project-list.open {
+    display: block;
+}
+
+/* Suppression des puces et style des items */
+.project-list ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.project-list li {
+    color: #555;
+    font-weight: bold;
+    cursor: pointer;
+    margin: 8px 0;
+}
+
+.project-list li:hover {
+    color: #000;
+    text-decoration: none;
+}
+
+.project-list {
+    display: none;
+    margin-top: 10px;
+    padding: 10px;
+    background: #f5f5f5;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.project-list.open {
+    display: block;
+}
+
+.project-item {
+    color: #555;
+    font-weight: bold;
+    margin: 8px 0;
+    cursor: pointer;
+}
+
+.project-item:hover {
+    color: #000;
+}
+.project-list {
+    display: none;
+    margin-top: 10px;
+    padding: 10px;
+    background: #f5f5f5;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.project-list.open {
+    display: block;
+}
+
+.project-item {
+    color: #555;
+    font-weight: bold;
+    margin: 8px 0;
+    cursor: pointer;
+}
+
+.project-item:hover {
+    color: #000;
+}

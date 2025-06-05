@@ -1,0 +1,40 @@
+/* content.css */
+.content {
+    margin-top: 90px;
+    margin-left: 40px;
+    margin-right: 240px;
+    padding: 40px;
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+    height: calc(100vh - 140px);
+    overflow-y: auto;
+    line-height: 1.7;
+}
+
+.content h1, .content h2, .content h3 {
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.content h2 {
+    font-size: 1.6rem;
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 5px;
+}
+
+.content h3 {
+    font-size: 1.3rem;
+}
+
+.content p {
+    margin-bottom: 20px;
+}
+
+.content ul {
+    margin: 15px 0 25px 20px;
+}
+
+.content li {
+    margin-bottom: 10px;
+}

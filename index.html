@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Silmawiki</title>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="assets/base.css">
+    <link rel="stylesheet" href="assets/layout.css">
+    <link rel="stylesheet" href="assets/content.css">
+    <link rel="stylesheet" href="assets/components.css">
+
+    <!-- FontAwesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Markdown Parser -->
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+
+    <!-- JS centralisé -->
+    <script src="pages/js/app.js" defer></script>
+</head>
+
+<body>
+    <div class="container">
+        <!-- Header -->
+        <header>
+            <h1 style="cursor: pointer;" onclick="loadContent('home')">
+                <i class="fas fa-cubes" style="margin-right: 10px;"></i> Silmawiki
+            </h1>
+        </header>
+
+        <!-- Sidebar -->
+        <div class="sidebar">
+            <ul>
+                <li><a href="#" onclick="loadContent('home')">Accueil</a></li>
+                <li><a href="#" onclick="loadContent('apropos')">À propos</a></li>
+
+                <!-- Projets -->
+                <li>
+                    <a href="#" onclick="loadContent('projets')">
+                        Projets
+                        <span style="cursor: pointer; margin-left: 8px;" onclick="toggleSubmenu('projetsSubmenu'); event.stopPropagation();">
+                            <i class="fas fa-chevron-right" id="chevron-projets" style="transition: transform 0.3s;"></i>
+                        </span>
+                    </a>
+                    <ul id="projetsSubmenu" class="submenu" style="display: none;">
+                        <li><a href="#" onclick="loadContent('agdpl')">AGDLP</a></li>
+                        <li><a href="#" onclick="loadContent('automation')">Automatisation</a></li>
+                        <li><a href="#" onclick="loadContent('vmware')">VMware</a></li>
+                        <li><a href="#" onclick="loadContent('homelab')">Infra Domicile</a></li>
+                    </ul>
+                </li>
+
+                <!-- Scripting -->
+                <li>
+                    <a href="#" onclick="loadContent('scripting')">
+                        Scripting
+                        <span style="cursor: pointer; margin-left: 8px;" onclick="toggleSubmenu('scriptingSubmenu'); event.stopPropagation();">
+                            <i class="fas fa-chevron-right" id="chevron-scripting" style="transition: transform 0.3s;"></i>
+                        </span>
+                    </a>
+                    <ul id="scriptingSubmenu" class="submenu" style="display: none;">
+                        <li><a href="#" onclick="loadContent('gestion_droits')">Gestion des droits</a></li>
+                        <li><a href="#" onclick="loadContent('exports')">Exports</a></li>
+                        <li><a href="#" onclick="loadContent('creation_comptes')">Création de comptes</a></li>
+                        <li><a href="#" onclick="loadContent('gestion_groupes')">Gestion des groupes</a></li>
+                        <li><a href="#" onclick="loadContent('liste_groupes')">Liste des groupes</a></li>
+                        <li><a href="#" onclick="loadContent('audit_acces')">Audit des accès</a></li>
+                        <li><a href="#" onclick="loadContent('copie_utilisateurs')">Copie de membres</a></li>
+                        <li><a href="#" onclick="loadContent('powershell')">PowerShell</a></li>
+                    </ul>
+                </li>
+
+                <!-- Base de connaissances -->
+                <li>
+                    <a href="#" onclick="loadContent('base')">
+                        Base de Co
+                        <span style="cursor: pointer; margin-left: 8px;" onclick="toggleSubmenu('baseSubmenu'); event.stopPropagation();">
+                            <i class="fas fa-chevron-right" id="chevron-base" style="transition: transform 0.3s;"></i>
+                        </span>
+                    </a>
+                    <ul id="baseSubmenu" class="submenu" style="display: none;">
+                        <li><a href="#" onclick="loadContent('exchange')">Exchange</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+
+        <!-- Contenu dynamique -->
+        <div class="content" id="content">
+            <h2>Bienvenue sur Silmawiki</h2>
+            <p>Chargement du contenu...</p>
+        </div>
+    </div>
+</body>
+</html>

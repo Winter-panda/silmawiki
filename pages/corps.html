@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Silmawiki</title>
+    <link rel="stylesheet" href="ui.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        body {
+            font-family: 'Segoe UI', 'Roboto', sans-serif;
+            background: #f5f2eb;
+            color: #1e293b;
+            height: 100vh;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        .container {
+            display: flex;
+            height: 100vh;
+            overflow: hidden;
+        }
+        header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 220px;
+            height: 70px;
+            background: linear-gradient(to right, #666666, #999999);
+            color: white;
+            display: flex;
+            align-items: center;
+            padding-left: 30px;
+            font-size: 1.8rem;
+            font-weight: 600;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+            z-index: 1000;
+        }
+        .sidebar {
+            position: fixed;
+            right: 0;
+            top: 0;
+            width: 220px;
+            height: 100%;
+            background: #2e3440;
+            color: #ffffff;
+            padding-top: 90px;
+            box-shadow: -2px 0 6px rgba(0,0,0,0.2);
+        }
+        .sidebar ul {
+            list-style: none;
+            padding: 0;
+        }
+        .sidebar li {
+            margin: 15px 0;
+        }
+        .sidebar a {
+            color: #d8dee9;
+            text-decoration: none;
+            padding: 12px 20px;
+            display: block;
+            transition: all 0.3s;
+            font-weight: 500;
+        }
+        .sidebar a:hover {
+            background: #4c566a;
+            border-left: 4px solid #b48ead;
+            color: white;
+        }
+        .content {
+            margin-top: 90px;
+            margin-left: 40px;
+            margin-right: 240px;
+            padding: 30px;
+            background: white;
+            border-radius: 12px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+            min-height: calc(100vh - 140px);
+            flex: 1;
+        }
+        .content h2 {
+            font-size: 2rem;
+            margin-bottom: 20px;
+            color: #2e3440;
+        }
+        .content p, .content ul {
+            font-size: 1.1rem;
+            line-height: 1.6;
+            text-align: justify;
+        }
+        .card-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            justify-content: center;
+            margin-top: 30px;
+        }
+        .card {
+            background: #f9f9f9;
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            padding: 30px;
+            width: 200px;
+            text-align: center;
+            transition: transform 0.3s, box-shadow 0.3s;
+            cursor: pointer;
+        }
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+        }
+        .card-icon {
+            font-size: 40px;
+            margin-bottom: 15px;
+        }
+        .project-link {
+            background: #f9f9f9;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            padding: 10px;
+            margin-bottom: 10px;
+            transition: background 0.3s;
+        }
+        .project-link a {
+            color: inherit;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+        .project-link:hover {
+            background: #ececec;
+        }
+        .project-link a:hover {
+            color: #2563eb;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Silmawiki</h1>
+        </header>
+        
+        <div class="content" id="content">
+            <h2>Bienvenue sur Silmawiki</h2>
+            <p>Ton espace personnel de documentation technique et de projets.</p>
+            <div class="card-container">
+                <div class="card" onclick="loadContent('projets')">
+                    <div class="card-icon"><i class="fas fa-folder-open"></i></div>
+                    <div>Projets</div>
+                </div>
+                <div class="card" onclick="loadContent('scripting')">
+                    <div class="card-icon"><i class="fas fa-terminal"></i></div>
+                    <div>Scripting</div>
+                </div>
+                <div class="card" onclick="loadContent('base')">
+                    <div class="card-icon"><i class="fas fa-book"></i></div>
+                    <div>Base de connaissances</div>
+                </div>
+                <div class="card" onclick="loadContent('apropos')">
+                    <div class="card-icon"><i class="fas fa-user"></i></div>
+                    <div>À propos</div>
+                </div>
+            </div>
+        </div>
+
+        <nav class="sidebar">
+            <ul>
+                <li><a href="#" onclick="loadContent('home')">Accueil</a></li>
+                <li><a href="#" onclick="loadContent('apropos')">À propos</a></li>
+                <li><a href="#" onclick="loadContent('projets')">Projets</a></li>
+                <li><a href="#" onclick="loadContent('scripting')">Scripting</a></li>
+                <li><a href="#" onclick="loadContent('base')">Base de connaissances</a></li>
+            </ul>
+        </nav>
+    </div>
+
+<script>
+    function loadContent(section) {
+        const content = document.getElementById("content");
+        if (section === "home") {
+            content.innerHTML = `<h2>Bienvenue sur Silmawiki</h2><p>Ton espace personnel de documentation technique et de projets.</p>
+            <div class='card-container'>
+                <div class='card' onclick="loadContent('projets')">
+                    <div class='card-icon'><i class='fas fa-folder-open'></i></div>
+                    <div>Projets</div>
+                </div>
+                <div class='card' onclick="loadContent('scripting')">
+                    <div class='card-icon'><i class='fas fa-terminal'></i></div>
+                    <div>Scripting</div>
+                </div>
+                <div class='card' onclick="loadContent('base')">
+                    <div class='card-icon'><i class='fas fa-book'></i></div>
+                    <div>Base de connaissances</div>
+                </div>
+                <div class='card' onclick="loadContent('apropos')">
+                    <div class='card-icon'><i class='fas fa-user'></i></div>
+                    <div>À propos</div>
+                </div>
+            </div>`;
+        } 
+        // On garde ici tout le reste de ton script existant sans le réécrire entièrement pour l'instant
+    }
+</script>
+</body>
+</html>

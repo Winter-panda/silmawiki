@@ -1,0 +1,60 @@
+<h2><i class="fas fa-user"></i> Profil professionnel</h2>
+
+<div class="cv-section">
+    <h3><i class="fas fa-id-card"></i> Présentation</h3>
+    <p style="text-align: justify;">
+        Administrateur Systèmes et Réseaux passionné avec plusieurs années d'expérience dans la gestion des infrastructures IT, l'automatisation, la sécurité des accès et la virtualisation.
+        Actuellement en poste chez Metsys, j'interviens sur divers projets clients et internes.
+    </p>
+</div>
+
+<div class="cv-section">
+    <h3><i class="fas fa-cogs"></i> Compétences techniques</h3>
+
+    <div class="skills-container">
+
+        <!-- Active Directory -->
+        <div class="skill-card" onclick="toggleProjects('ad-projects')">
+            <i class="fas fa-users-cog"></i><br>Active Directory / Exchange
+        </div>
+        <div id="ad-projects" class="project-list">
+            <div class="project-item" onclick="loadContent('projets')">Projet AGDLP</div>
+            <div class="project-item" onclick="loadContent('exchange')">Configuration Exchange</div>
+        </div>
+
+        <!-- PowerShell -->
+        <div class="skill-card" onclick="toggleProjects('ps-projects')">
+            <i class="fas fa-terminal"></i><br>PowerShell / Automatisation
+        </div>
+        <div id="ps-projects" class="project-list">
+            <div class="project-item" onclick="loadContent('scripting')">Gestion de droits - Scripts PowerShell</div>
+        </div>
+
+        <!-- Virtualisation -->
+        <div class="skill-card" onclick="toggleProjects('virt-projects')">
+            <i class="fas fa-server"></i><br>VMware / Virtualisation
+        </div>
+        <div id="virt-projects" class="project-list">
+            <div class="project-item" onclick="loadContent('proxmox')">Proxmox & Virtualisation</div>
+            <div class="project-item" onclick="loadContent('truenas')">TrueNAS & iSCSI</div>
+        </div>
+
+    </div>
+</div>
+
+<div class="cv-section">
+    <h3><i class="fas fa-briefcase"></i> Expériences clés</h3>
+    <ul class="experiences">
+        <li><strong>Metsys</strong> (depuis 2023) - Administrateur Systèmes et Réseaux</li>
+        <li><strong>Labocea</strong> (2021-2023) - Support & Infrastructure</li>
+    </ul>
+</div>
+
+<div class="cv-section">
+    <h3><i class="fas fa-graduation-cap"></i> Diplômes & Formations</h3>
+    <ul class="experiences">
+        <li>ENI - Administrateur Systèmes et Réseaux (2025)</li>
+        <li>ENI - Technicien Systèmes et Réseaux (2023)</li>
+        <li>ISTS (ESRA Bretagne) - Technicien du son (2009-2011)</li>
+    </ul>
+</div>
