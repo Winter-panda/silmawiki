@@ -63,7 +63,7 @@
 }   
 .content th {
     background-color: #f7f7f7;
-    color: #1e293b;
+    color: #0d0d0e;
 }
 .content code {
     background-color: #f4f4f4;
@@ -106,7 +106,7 @@
 }
 .content .highlight {
     background-color: #f0f8ff;
-    border-left: 4px solid #1e293b;
+    border-left: 4px solid #0f0f0f;
     padding: 10px;
     margin: 20px 0;
 }
