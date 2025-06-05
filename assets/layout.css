@@ -21,16 +21,24 @@ header {
     z-index: 1000;
 }
 
+/* Sidebar rétractable */
 .sidebar {
     position: fixed;
-    right: 0;
     top: 0;
-    width: 220px;
+    right: 0;
+    width: 60px; /* largeur minimale rétractée */
     height: 100%;
     background: #2e3440;
     color: #ffffff;
     padding-top: 90px;
     box-shadow: -2px 0 6px rgba(0,0,0,0.2);
+    overflow-x: hidden;
+    transition: width 0.3s;
+    z-index: 999;
+}
+
+.sidebar:hover {
+    width: 220px; /* largeur complète au survol */
 }
 
 .sidebar ul {
@@ -46,7 +54,8 @@ header {
     color: #d8dee9;
     text-decoration: none;
     padding: 12px 20px;
-    display: block;
+    display: flex;
+    align-items: center;
     transition: all 0.3s;
     font-weight: 500;
 }
@@ -56,10 +65,22 @@ header {
     border-left: 4px solid #b48ead;
     color: white;
 }
+
+/* Masquer les textes hors survol */
+.sidebar:not(:hover) span {
+    display: none;
+}
+
+/* On force les icônes à toujours s’afficher */
+.sidebar i {
+    margin-right: 10px;
+}
+
+/* Sous-menus */
 .submenu li {
     margin: 8px 0;
     font-size: 0.9rem;
-    padding-left: 20px; /* Décalage vers la droite */
+    padding-left: 20px;
 }
 
 .submenu a {

@@ -33,13 +33,13 @@
         <!-- Sidebar -->
         <div class="sidebar">
             <ul>
-                <li><a href="#" onclick="loadContent('home')">Accueil</a></li>
-                <li><a href="#" onclick="loadContent('apropos')">À propos</a></li>
+                <li><a href="#" onclick="loadContent('home')"><i class="fas fa-home"></i><span> Accueil</span></a></li>
+                <li><a href="#" onclick="loadContent('apropos')"><i class="fas fa-user"></i><span> À propos</span></a></li>
 
                 <!-- Projets -->
                 <li>
                     <a href="#" onclick="loadContent('projets')">
-                        Projets
+                        <i class="fas fa-briefcase"></i><span> Projets</span>
                         <span style="cursor: pointer; margin-left: 8px;" onclick="toggleSubmenu('projetsSubmenu'); event.stopPropagation();">
                             <i class="fas fa-chevron-right" id="chevron-projets" style="transition: transform 0.3s;"></i>
                         </span>
@@ -55,7 +55,7 @@
                 <!-- Scripting -->
                 <li>
                     <a href="#" onclick="loadContent('scripting')">
-                        Scripting
+                        <i class="fas fa-code"></i><span> Scripting</span>
                         <span style="cursor: pointer; margin-left: 8px;" onclick="toggleSubmenu('scriptingSubmenu'); event.stopPropagation();">
                             <i class="fas fa-chevron-right" id="chevron-scripting" style="transition: transform 0.3s;"></i>
                         </span>
@@ -75,10 +75,10 @@
                 <!-- Base de connaissances -->
                 <li>
                     <a href="#" onclick="loadContent('base')">
-                    Base de Co
+                        <i class="fas fa-book"></i><span> Base de Co</span>
                         <span style="cursor: pointer; margin-left: 8px;" onclick="toggleSubmenu('baseSubmenu'); event.stopPropagation();">
-                <i class="fas fa-chevron-right" id="chevron-base" style="transition: transform 0.3s;"></i>
-                         </span>
+                            <i class="fas fa-chevron-right" id="chevron-base" style="transition: transform 0.3s;"></i>
+                        </span>
                     </a>
                     <ul id="baseSubmenu" class="submenu" style="display: none;">
                         <li><a href="#" onclick="loadContent('bases-powershell')">PowerShell</a></li>
