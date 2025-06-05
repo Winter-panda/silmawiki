@@ -1,4 +1,5 @@
-function resolvePath(section) {
+const BASE_PATH = window.location.hostname === 'winter-panda.github.io' ? '/silmawiki/' : '/';
+
     const mappings = {
         'home': 'pages/home.html',
         'apropos': 'pages/apropos.html',
