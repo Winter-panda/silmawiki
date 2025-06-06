@@ -1,72 +1,148 @@
-/* layout.css */
-.container {
+/* Structure de base sticky */
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
     display: flex;
-    height: 100vh;
+    flex-direction: column;
 }
 
+.container {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Fond principal décoratif */
+body {
+    position: relative;
+    background-color: #f5f5f5;
+}
+
+body::before {
+    content: "";
+    position: fixed;
+    top: 0; left: 0; right: 0; bottom: 0;
+    z-index: -1;
+    background: 
+        url('https://images.pexels.com/photos/417074/pexels-photo-417074.jpeg') top center no-repeat,
+        url('https://images.pexels.com/photos/417074/pexels-photo-417074.jpeg') bottom center no-repeat;
+    background-size: 100% auto;
+    opacity: 0.5;
+}
+
+/* Header */
 header {
     position: fixed;
     top: 0;
     left: 0;
     right: 220px;
     height: 70px;
-    background: linear-gradient(to right, #666666, #999999);
+    background: rgba(30, 41, 59, 0.9);
+    backdrop-filter: blur(4px);
     color: white;
     display: flex;
     align-items: center;
     padding-left: 30px;
     font-size: 1.8rem;
     font-weight: 600;
-    box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.3);
     z-index: 1000;
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
 }
 
+/* Titre header et icône Silmawiki */
+header h1 {
+    color: #ffffff;
+}
+
+header h1 i {
+    color: #facc15; /* Jaune doré pastel */
+}
+
+/* Sidebar */
 .sidebar {
     position: fixed;
-    right: 0;
     top: 0;
-    width: 220px;
+    right: 0;
+    width: 60px;
     height: 100%;
-    background: #2e3440;
+    background: rgba(46, 52, 64, 0.95);
+    backdrop-filter: blur(4px);
     color: #ffffff;
     padding-top: 90px;
-    box-shadow: -2px 0 6px rgba(0,0,0,0.2);
+    box-shadow: -2px 0 6px rgba(0,0,0,0.3);
+    overflow-x: hidden;
+    transition: width 0.3s;
+    z-index: 999;
 }
 
-.sidebar ul {
-    list-style: none;
-    padding: 0;
+.sidebar:hover {
+    width: 220px;
 }
 
-.sidebar li {
-    margin: 15px 0;
+.sidebar ul { list-style: none; padding: 0; }
+.sidebar li { margin: 15px 0; }
+.sidebar a { color: #d8dee9; text-decoration: none; padding: 12px 20px; display: flex; align-items: center; transition: all 0.3s; font-weight: 500; }
+.sidebar a:hover { background: #4c566a; border-left: 4px solid #b48ead; color: white; }
+.sidebar:not(:hover) span { display: none; }
+.sidebar i { margin-right: 10px; }
+.submenu li { margin: 8px 0; font-size: 0.9rem; padding-left: 20px; }
+.submenu a { font-size: 0.9rem; color: #d8dee9; }
+.submenu a:hover { color: white; }
+
+/* Contenu principal */
+.content {
+    background: white;
+    border-radius: 12px;
+    padding: 30px;
+    max-width: 1200px;
+    margin: 100px auto 40px auto;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
 }
 
-.sidebar a {
-    color: #d8dee9;
-    text-decoration: none;
-    padding: 12px 20px;
-    display: block;
-    transition: all 0.3s;
-    font-weight: 500;
+/* Responsive Design */
+@media (max-width: 992px) {
+    header { right: 0; }
+    .sidebar { display: none; }
+    .content { margin: 100px 20px 40px 20px; padding: 20px; }
 }
 
-.sidebar a:hover {
-    background: #4c566a;
-    border-left: 4px solid #b48ead;
-    color: white;
-}
-.submenu li {
-    margin: 8px 0;
-    font-size: 0.9rem;
-    padding-left: 20px; /* Décalage vers la droite */
+@media (max-width: 600px) {
+    header { font-size: 1.2rem; padding-left: 15px; }
+    .content { padding: 15px; }
 }
 
-.submenu a {
-    font-size: 0.9rem;
-    color: #d8dee9;
+footer {
+    text-align: center;
+    font-size: 1rem;
+    color: #aaa;
+    padding: 25px 0;
+    background: rgba(30, 41, 59, 0.95);
+    backdrop-filter: blur(4px);
+    border-top: 1px solid rgba(255,255,255,0.1);
+    box-shadow: 0 -2px 8px rgba(0,0,0,0.2);
 }
 
-.submenu a:hover {
-    color: white;
+footer p { margin: 0; color: #ddd; }
+
+/* LinkedIn */
+footer a.linkedin {
+    margin-left: 10px;
+    color: #0077b5;
+    font-size: 1.4rem;
+    transition: color 0.3s;
 }
+
+footer a.linkedin:hover { color: #005582; }
+
+/* GitHub */
+footer a.github {
+    margin-left: 10px;
+    color: #ddd;
+    font-size: 1.4rem;
+    transition: color 0.3s;
+}
+
+footer a.github:hover { color: #ffffff; }

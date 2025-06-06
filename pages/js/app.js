@@ -64,7 +64,9 @@ function loadContent(section) {
 
 function addCopyButtons() {
     document.querySelectorAll('pre').forEach((pre) => {
-        if (pre.querySelector('.copy-btn')) return;
+        // Ne pas dupliquer les boutons
+        if (pre.nextElementSibling && pre.nextElementSibling.classList.contains('copy-btn')) return;
+
         const button = document.createElement('button');
         button.className = 'copy-btn';
         button.innerText = 'Copier';
@@ -73,7 +75,9 @@ function addCopyButtons() {
             button.innerText = 'Copié !';
             setTimeout(() => button.innerText = 'Copier', 2000);
         });
-        pre.appendChild(button);
+
+        // On insère le bouton juste après le bloc <pre>
+        pre.insertAdjacentElement('afterend', button);
     });
 }
 

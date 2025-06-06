@@ -1,3 +1,22 @@
+/* Bloc d’introduction commun à toutes les pages */
+.page-intro, .intro-text {
+    background-color: #f7f7f7;
+    border: 1px solid #ddd;
+    border-radius: 12px;
+    padding: 20px 30px;
+    max-width: 900px;
+    margin: 20px auto 40px auto;
+    text-align: justify;
+    font-size: 1rem;
+    color: #333;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+}
+
+.page-intro h2, .intro-text h2 {
+    color: #1e293b;
+    margin-bottom: 15px;
+}
+
 /* Containers des tuiles */
 .card-container, .project-container, .knowledge-container, .scripting-container, .subpage-container, .skills-container {
     display: flex;
@@ -7,7 +26,7 @@
     margin-top: 30px;
 }
 
-/* Style des cartes */
+/* Style général des cartes */
 .card, .project-card, .knowledge-card, .scripting-card, .skill-card, .subpage-card {
     background: #f9f9f9;
     border: 1px solid #ddd;
@@ -27,7 +46,7 @@
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
 }
 
-/* Encarts compétences masqués par défaut */
+/* Encarts compétences masqués par défaut (project-list) */
 .project-list {
     display: none;
     overflow: hidden;
@@ -40,75 +59,173 @@
     transition: max-height 0.4s ease, padding 0.4s ease;
 }
 
-/* Quand le bloc est ouvert */
 .project-list.open {
     display: block;
 }
 
-/* Suppression des puces et style des items */
-.project-list ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-}
-
-.project-list li {
+.project-item {
     color: #555;
     font-weight: bold;
+    margin: 8 px 0;
     cursor: pointer;
-    margin: 8px 0;
 }
 
-.project-list li:hover {
+.project-item:hover {
     color: #000;
+}
+
+/* Styles pour les boutons généraux */
+.button, .button-secondary {
+    display: inline-block;
+    padding: 10px 20px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.button {
+    background-color: #1e293b;
+    color: #fff;
+}
+
+.button:hover {
+    background-color: #334155;
+    transform: translateY(-2px);
+}
+
+.button-secondary {
+    background-color: #e2e8f0;
+    color: #1e293b;
+}
+
+.button-secondary:hover {
+    background-color: #cbd5e1;
+    transform: translateY(-2px);
+}
+
+/* Styles pour les titres */
+h1, h2, h3 {
+    color: #1e293b;
+    margin-bottom: 15px;
+}
+
+h1 {
+    font-size: 2rem;
+    font-weight: 700;
+}
+
+h2 {
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+
+h3 {
+    font-size: 1.25rem;
+    font-weight: 500;
+}
+
+/* Styles pour les paragraphes */
+p {
+    color: #555;
+    line-height: 1.6;
+    margin-bottom: 15px;
+}
+
+/* Styles pour les listes */
+ul, ol {
+    margin-left: 20px;
+    color: #555;
+}
+
+li {
+    margin-bottom: 10px;
+}
+
+/* Styles pour les liens */
+a {
+    color: #1e293b;
     text-decoration: none;
 }
 
-.project-list {
-    display: none;
-    margin-top: 10px;
-    padding: 10px;
-    background: #f5f5f5;
-    border: 1px solid #ddd;
+a:hover {
+    text-decoration: underline;
+}
+
+/* Styles pour les images */
+img {
+    max-width: 100%;
+    height: auto;
     border-radius: 8px;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
-.project-list.open {
-    display: block;
+/* Styles pour les tableaux */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
 }
 
-.project-item {
-    color: #555;
-    font-weight: bold;
-    margin: 8px 0;
-    cursor: pointer;
-}
-
-.project-item:hover {
-    color: #000;
-}
-.project-list {
-    display: none;
-    margin-top: 10px;
-    padding: 10px;
-    background: #f5f5f5;
+th, td {
     border: 1px solid #ddd;
-    border-radius: 8px;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    padding: 10px;
+    text-align: left;
 }
 
-.project-list.open {
+th {
+    background-color: #f7f7f7;
+    border: 1px solid #ddd;
+    border-radius: 12px;
+    padding: 20px 30px;
+    max-width: 900px;
+    margin: 20px auto;
+    text-align: justify;
+    font-size: 1rem;
+    color: #333;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    margin-bottom: 10px;
+}
+
+/* Bouton de copie sous les blocs de code */
+.copy-btn {
     display: block;
-}
-
-.project-item {
-    color: #555;
+    margin: 0 auto 30px auto;
+    padding: 10px 20px;
+    background-color: #1e293b;
+    color: #fff;
+    border: none;
+    border-radius: 8px;
     font-weight: bold;
-    margin: 8px 0;
     cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
 }
 
-.project-item:hover {
-    color: #000;
+.copy-btn:hover {
+    background-color: #334155;
+    transform: translateY(-2px);
+}
+.cv-card {
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 12px;
+    padding: 20px 30px;
+    margin: 20px auto;
+    max-width: 900px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    color: #333;
+}
+
+.cv-card h3 {
+    color: #1e293b;
+    margin-bottom: 15px;
+}
+
+.cv-card ul {
+    padding-left: 20px;
+}
+
+.cv-card li {
+    margin-bottom: 10px;
 }
