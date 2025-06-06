@@ -125,24 +125,6 @@ footer {
     box-shadow: 0 -2px 8px rgba(0,0,0,0.2);
 }
 
-footer p { margin: 0; color: #ddd; }
-
-/* LinkedIn */
-footer a.linkedin {
-    margin-left: 10px;
-    color: #0077b5;
-    font-size: 1.4rem;
-    transition: color 0.3s;
+.submenu a:hover {
+    color: white;
 }
-
-footer a.linkedin:hover { color: #005582; }
-
-/* GitHub */
-footer a.github {
-    margin-left: 10px;
-    color: #ddd;
-    font-size: 1.4rem;
-    transition: color 0.3s;
-}
-
-footer a.github:hover { color: #ffffff; }
